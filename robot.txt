@@ -10,4 +10,4 @@ Allow: /5ab49b1a9d5dd504f2a3bdec83b4294a.jpg
 Allow: /AYAN IMRAN (2).jpg
 
 # Tell Google exactly where your sitemap is located
-Sitemap: https://azanimran112243-sudo.github.io/sitemap.xml
+Sitemap: Sitemap: https://azanimran112243-sudo.github.io/Ayan-Imran/sitemap.xml
