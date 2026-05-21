@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ayan Imran — CEO of AION</title>
+    <meta name="description" content="Official portfolio and blog of Ayan Imran, software developer, founder, and CEO of AION.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ayan Imran">
+    <link rel="canonical" href="https://azanimran112243-sudo.github.io/"> 
+
+    <meta name="keywords" content="Ayan Imran, AYAN IMRAN, Ayan imran, ayaan imran, ayyan imran, ayan, ayaan, ayyan, imran, AION CEO">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azanimran112243-sudo.github.io/">
+    <meta property="og:title" content="Ayan Imran — CEO of AION">
+    <meta property="og:description" content="Official portfolio and engineering blog of developer Ayan Imran.">
+    <meta property="og:image" content="AYAN IMRAN (2).jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ayan Imran",
+      "alternateName": ["Ayaan Imran", "Ayyan Imran", "Ayan imran", "AYAN IMRAN"],
+      "url": "https://azanimran112243-sudo.github.io/",
+      "jobTitle": "CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "AION"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/jpeg" href="5ab49b1a9d5dd504f2a3bdec83b4294a.jpg?v=2">
+    <link rel="apple-touch-icon" href="5ab49b1a9d5dd504f2a3bdec83b4294a.jpg?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="petals-canvas"></canvas>
+
+    <nav>
+        <button class="nav-logo" onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">
+            <span>ME</span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="section">
+        
+        <div class="paper-tear doodle">
+            <svg width="240" height="120" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 H230 L220 20 L235 35 L215 50 L228 65 L210 80 L225 100 L0 100 Z" fill="#FFFDF7" stroke="rgba(123,28,28,0.3)" stroke-width="1"/>
+                <line x1="20" y1="20" x2="210" y2="20" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
+                <line x1="20" y1="34" x2="210" y2="34" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
+                <line x1="20" y1="48" x2="210" y2="48" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
+                <line x1="20" y1="62" x2="210" y2="62" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
+                <line x1="20" y1="76" x2="210" y2="76" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
+                <line x1="38" y1="10" x2="38" y2="90" stroke="rgba(220,80,80,0.25)" stroke-width="1.5"/>
+                <text x="48" y="26" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.5)">notes &amp; ideas</text>
+                <text x="48" y="40" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.4)">✦ build cool stuff</text>
+                <text x="48" y="54" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.35)">✦ lead &amp; create</text>
+                <text x="48" y="68" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.3)">✦ ship it</text>
+            </svg>
+        </div>
+
+        <div class="ghost-figure">
+            <svg viewBox="0 0 200 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="100" cy="60" rx="38" ry="45" fill="rgba(123,28,28,0.15)" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
+                <path d="M62 100 C50 130 45 180 48 240 L60 230 L75 280 L80 370 L100 375 L105 280 L115 370 L120 375 L125 280 L140 230 L152 240 C155 180 150 130 138 100 Z" fill="rgba(123,28,28,0.12)" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
+                <path d="M62 115 C40 120 20 140 15 170 L30 175 L20 200 L40 195" fill="none" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
+                <path d="M138 115 C160 120 180 140 185 170 L170 175 L180 200 L160 195" fill="none" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
+            </svg>
+        </div>
+
+        <div class="doodle plane-1">
+            <svg width="90" height="50" viewBox="0 0 90 50" fill="none">
+                <path d="M5 40 L80 8 L50 35 L40 28 Z" stroke="rgba(123,28,28,0.5)" stroke-width="1.5" fill="rgba(245,237,216,0.4)" stroke-linejoin="round"/>
+                <path d="M50 35 L45 48 L40 28" stroke="rgba(123,28,28,0.4)" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="doodle dynamic-burst">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 0C30 16.5685 16.5685 30 0 30C16.5685 30 30 43.4315 30 60C30 43.4315 43.4315 30 60 30C43.4315 30 30 16.5685 30 0Z" fill="var(--maroon-light)" opacity="0.35"/>
+            </svg>
+        </div>
+        
+        <div class="doodle star-1">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <line x1="25" y1="5" x2="25" y2="45" stroke="rgba(123,28,28,0.45)" stroke-width="1.5"/>
+                <line x1="5" y1="25" x2="45" y2="25" stroke="rgba(123,28,28,0.45)" stroke-width="1.5"/>
+                <circle cx="25" cy="25" r="3" fill="rgba(123,28,28,0.4)"/>
+            </svg>
+        </div>
+
+        <div class="botanical doodle">
+            <svg viewBox="0 0 180 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 210 C90 180 85 150 88 120 C91 90 87 60 90 30" stroke="rgba(123,28,28,0.4)" stroke-width="1.5" fill="none"/>
+                <path d="M90 160 C70 145 55 130 60 110 C65 130 80 140 90 160" stroke="rgba(123,28,28,0.35)" stroke-width="1" fill="rgba(123,28,28,0.06)"/>
+                <path d="M90 160 C110 145 125 130 120 110 C115 130 100 140 90 160" stroke="rgba(123,28,28,0.35)" stroke-width="1" fill="rgba(123,28,28,0.06)"/>
+                <circle cx="90" cy="28" r="15" stroke="rgba(123,28,28,0.4)" stroke-width="1" fill="rgba(245,237,216,0.5)"/>
+                <polygon points="130,170 140,160 152,165 152,178 140,183" fill="rgba(123,28,28,0.7)" stroke="rgba(80,10,10,0.8)" stroke-width="1"/>
+                <circle cx="141" cy="172" r="10" fill="rgba(123,28,28,0.8)" stroke="rgba(200,150,100,0.4)" stroke-width="1"/>
+                <text x="136" y="176" font-family="Georgia,serif" font-size="10" fill="rgba(245,237,216,0.9)" font-weight="bold">ME</text>
+            </svg>
+        </div>
+
+
+        <div class="hero-inner">
+            <div class="hero-tag">✦ Developer ✦</div>
+            <h1 class="hero-name">AYAN<br>IMRAN</h1>
+            <p class="hero-ceo">CEO of AION</p>
+            <p class="hero-scroll-hint">↓ scroll to explore ↓</p>
+        </div>
+
+        <div class="loader">
+            <span></span>
+        </div>
+
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-header">My Projects</h2>
+
+        <div class="carousel-wrap">
+            <button class="carousel-btn prev" onclick="slideCarousel(-1)">&#8592;</button>
+            <button class="carousel-btn next" onclick="slideCarousel(1)">&#8594;</button>
+
+            <div class="carousel-track" id="carousel">
+
+                <a href="https://azanimran112243-sudo.github.io/" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="card-thumb">
+    <img src="1p.png" class="project-thumb-img" alt="Grokrunner">
+    
+    <div class="card-thumb-inner"></div>
+</div>
+                        </div>
+                        <h3 class="card-title">CHARACTER SPECIAL</h3>
+                        <p class="card-desc">A full-stack coding community hub — built to teach, inspire, and connect the next generation of builders.</p>
+                        <div>
+                            <span class="card-tag">front-end</span><span class="card-tag">UI/UX</span>
+                        </div>
+                        <span class="card-btn">VIEW LIVE ↗</span>
+                    </div>
+                </a>
+
+                  <a href="https://azanimran112243-sudo.github.io/project-664/" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="card-thumb">
+    <img src="2p.png" class="project-thumb-img" alt="Grokrunner">
+    
+    <div class="card-thumb-inner"></div>
+</div>
+                        </div>
+                        <h3 class="card-title">High Visuals</h3>
+                        <p class="card-desc">Just Build in 2 days</p>
+                        <div>
+                            <span class="card-tag">front-end</span><span class="card-tag">UI/UX</span>
+                        </div>
+                        <span class="card-btn">VIEW LIVE ↗</span>
+                    </div>
+                </a>
+
+                 <a href="https://grokrunner.store/" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="card-thumb">
+    <img src="3p.png" class="project-thumb-img" alt="Grokrunner">
+    
+    <div class="card-thumb-inner"></div>
+</div>
+                        </div>
+                        <h3 class="card-title">3D Model</h3>
+                        <p class="card-desc">a satisfied client</p>
+                        <div>
+                            <span class="card-tag">3D Model</span><span class="card-tag">UI/UX</span>
+                        </div>
+                        <span class="card-btn">VIEW LIVE ↗</span>
+                    </div>
+                </a>
+
+                <a href="https://your-live-project-link4.com" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="card-thumb-inner">
+                                <span class="card-thumb-label">[ comming soon... ]</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">in progress</h3>
+                        <p class="card-desc"></p>
+                        <div>
+                            <span class="card-tag">...</span><span class="card-tag">...</span>
+                        </div>
+                        <span class="card-btn">VIEW LIVE ↗</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-header">About the Boss</h2>
+
+        <div class="about-grid">
+            <div class="about-bio">
+                <p>I am <strong>Ayan Imran</strong>, a developer with a leadership mindset. Combining a background in programming with a passion for building impactful, high-performance systems. I lead projects with clarity and focus, driving them to success.</p>
+                <br>
+                <p>I believe the best code is written with conviction — not just logic. Every function, every deploy, every commit is a small act of leadership.</p>
+                <br>
+                <p><span class="daba">AION</span> is my creative outlet — a platform I built to share knowledge, spark curiosity, and cultivate a culture where building is celebrated. It's scrappy, real, and genuinely mine.</p>
+                <br>
+                <p>I ship fast. I think big. I document obsessively.</p>
+            </div>
+
+            <div>
+                <div class="skills-wrap">
+                    <p class="skills-title">// Skill Pulse</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>JavaScript</span><span class="skill-pct">92%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Problem Solving</span><span class="skill-pct">85%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Design</span><span class="skill-pct">88%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Project Leadership</span><span class="skill-pct">96%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="96"></div></div>
+                    </div>
+                </div>
+
+                <div class="timeline-wrap">
+                    <p class="timeline-title">// Leadership Timeline</p>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <p class="tl-year">EARLY VENTURES</p>
+                            <p class="tl-label">First scripts, first bugs, first wins. Building the foundation.</p>
+                        </div>
+                        <div class="tl-item">
+                            <p class="tl-year">AION</p>
+                            <p class="tl-label">Launched the platform. Turned solo code into a movement.</p>
+                        </div>
+                        <div class="tl-item">
+                            <p class="tl-year">CEO PHASE ✦ NOW</p>
+                            <p class="tl-label">Leading, shipping, teaching. The whole operation — one mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2 class="section-header">Fav characters</h2>
+        <p class="blog-subtitle">I watch anime a lot and i also have some real life ideals</p>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-meta">
+                    <span class="blog-date">MAY 2026</span>
+                    <span class="blog-category">Real life character</span>
+                </div>
+                <h3 class="blog-title"><a href="#">Khalid bin Walid</a></h3>
+                <p class="blog-excerpt"> "I bring the men who desire death as ardently as you desire life."</p>
+                <div class="blog-footer">
+                    <span class="blog-author">— Khlid bin Walid</span>
+                    <a href="#" class="blog-more">Sworld of Allah</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-meta">
+                    <span class="blog-date">APR 2026</span>
+                    <span class="blog-category">Anime</span>
+                </div>
+                <h3 class="blog-title"><a href="#">Monkey D. LUFFY</a></h3>
+                <p class="blog-excerpt">"If you're hungry, eat."</p>
+                <div class="blog-footer">
+                    <span class="blog-author">— Luffy</span>
+                    <a href="#" class="blog-more">Future Pirate King</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-header">Let's Connect</h2>
+    <p class="contact-desc-text">
+        Got a project, a collab idea, or just want to say hello? Reach out — I'm always building something new.
+    </p>
+
+    <div class="contact-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 30px;">
+        
+        <a href="https://wa.me/923316389247" target="_blank" rel="noopener noreferrer">
+            <button class="contact-btn">
+                <span>WHATSAPP</span>
+            </button>
+        </a>
+
+        <a href="https://instagram.com/ayan_15o" target="_blank" rel="noopener noreferrer">
+            <button class="contact-btn">
+                <span>INSTAGRAM</span>
+            </button>
+        </a>
+
+        <a href="mailto:1ayan1imran1@gmail.com">
+            <button class="contact-btn">
+                <span>EMAIL</span>
+            </button>
+        </a>
+        
+    </div>
+
+        <div class="anchor-corner doodle">
+            <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="30" stroke="rgba(123,28,28,0.35)" stroke-width="1.5" fill="none"/>
+                <path d="M50 20 L54 44 L50 48 L46 44 Z" fill="rgba(123,28,28,0.55)"/>
+                <path d="M50 80 L54 56 L50 52 L46 56 Z" fill="rgba(245,237,216,0.8)" stroke="rgba(123,28,28,0.4)" stroke-width="0.8"/>
+                <text x="47" y="16" font-family="Oswald,sans-serif" font-size="8" fill="rgba(123,28,28,0.6)" font-weight="700">N</text>
+            </svg>
+        </div>
+    </section>
+
+    <footer>
+        <p>✦ Ayan Imran — CEO of AION ✦ Built with conviction, shipped with pride ✦</p>
+    </footer>
+
+    <script>
+    /* ── FALLING PETALS CANVAS ENGINE ───────── */
+    (function() {
+        const canvas = document.getElementById('petals-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H, petals = [];
+
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const COLORS = [
+            'rgba(123,28,28,0.55)',
+            'rgba(155,44,44,0.5)',
+            'rgba(180,60,60,0.45)',
+            'rgba(100,15,15,0.6)',
+            'rgba(140,30,30,0.4)',
+        ];
+
+        function Petal() {
+            this.reset = function() {
+                this.x = Math.random() * W;
+                this.y = -20;
+                this.size = Math.random() * 10 + 6; 
+                this.speedY = Math.random() * 1.4 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotSpeed = (Math.random() - 0.5) * 0.05;
+                this.sway = Math.random() * 2.5 + 1;
+                this.swaySpeed = Math.random() * 0.02 + 0.01;
+                this.swayOffset = Math.random() * Math.PI * 2;
+                this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+                this.opacity = Math.random() * 0.5 + 0.3;
+                this.tick = 0;
+            };
+            this.reset();
+            this.y = Math.random() * H;
+        }
+
+        Petal.prototype.update = function() {
+            this.tick++;
+            this.y += this.speedY;
+            this.x += this.speedX + Math.sin(this.tick * this.swaySpeed + this.swayOffset) * this.sway * 0.03;
+            this.rotation += this.rotSpeed;
+            if (this.y > H + 30) this.reset();
+        };
+
+        Petal.prototype.draw = function() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation);
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.moveTo(0, -this.size);
+            ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.6, this.size * 0.8, this.size * 0.5, 0, this.size * 0.7);
+            ctx.bezierCurveTo(-this.size * 0.8, this.size * 0.5, -this.size * 0.8, -this.size * 0.6, 0, -this.size);
+            ctx.fill();
+            ctx.restore();
+        };
+
+        for (let i = 0; i < 48; i++) petals.push(new Petal()); 
+
+        function loop() {
+            ctx.clearRect(0, 0, W, H);
+            petals.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(loop);
+        }
+        loop();
+    })();
+
+    /* ── SCROLL OBSERVER FADE-IN ────────────── */
+    const sections = document.querySelectorAll('.section'); 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                if (e.target.id === 'about') {
+                    setTimeout(animateSkills, 300);
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(s => observer.observe(s));
+
+    /* ── SKILL BARS ACCELERATION ────────────── */
+    let skillsAnimated = false;
+    function animateSkills() {
+        if (skillsAnimated) return;
+        skillsAnimated = true;
+        document.querySelectorAll('.skill-fill').forEach(fill => {
+            const w = fill.getAttribute('data-width');
+            setTimeout(() => { fill.style.width = w + '%'; }, 100);
+        });
+    }
+
+    /* ── CAROUSEL CONTROLLER ────────────────── */
+   /* ── CAROUSEL CONTROLLER ────────────────── */
+    let carouselIndex = 0;
+    const track = document.getElementById('carousel');
+
+    // Dynamically get the width of a card
+    function getCardWidth() {
+        const card = document.querySelector('.project-card-link');
+        return card ? card.offsetWidth : 328; // Fallback to 328 if not found
+    }
+
+    function slideCarousel(dir) {
+        const CARD_W = getCardWidth(); // Always get current width
+        const cards = track.querySelectorAll('.project-card-link');
+        // Calculate max index based on current width
+        const maxIndex = cards.length - Math.floor(track.parentElement.offsetWidth / CARD_W);
+        carouselIndex = Math.max(0, Math.min(carouselIndex + dir, Math.max(0, maxIndex)));
+        track.style.transform = `translateX(-${carouselIndex * CARD_W}px)`;
+    }
+
+    // Reset position on resize to prevent layout breaking
+   // ... Replace the "// ... (Keep the rest...)" comment with this:
+
+    document.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        const dx = startX - e.clientX;
+        track.style.transform = `translateX(-${Math.max(0, startScroll + dx)}px)`;
+    });
+
+    document.addEventListener('mouseup', e => {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
+        const dx = startX - e.clientX;
+        // Slide only if dragged enough
+        if (Math.abs(dx) > 60) slideCarousel(dx > 0 ? 1 : -1);
+        else slideCarousel(0);
+    });
+
+    track.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        startScroll = carouselIndex * getCardWidth();
+        track.style.transition = 'none';
+    }, { passive: true });
+    
+    // ... (Keep the rest of your move/mouse listeners as they are)
+
+    </script>
+</body>
+</html>
