@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MW7JK0NXFY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW7JK0NXFY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-MW7JK0NXFY');
-</script>
+      gtag('config', 'G-MW7JK0NXFY');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ayan Imran — CEO of AION</title>
+    <title>AYAN IMRAN — CREATIVE DEVELOPER</title>
+    <link rel="icon" type="hat.jpg" href="hat.jpg">
     <meta name="google-site-verification" content="S-BhODVpbjnDfZLTINVsFBQXfyHuYOAWam0FQmV9hVg" />
     <meta name="description" content="Official portfolio and blog of Ayan Imran, software developer, founder, and CEO of AION.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Ayan Imran">
     <link rel="canonical" href="https://azanimran112243-sudo.github.io/Ayan-Imran/"> 
-
     <meta name="keywords" content="Ayan Imran, AYAN IMRAN, Ayan imran, ayaan imran, ayyan imran, ayan, ayaan, ayyan, imran, AION CEO">
 
     <meta property="og:type" content="website">
@@ -47,460 +47,837 @@
     <link rel="apple-touch-icon" href="5ab49b1a9d5dd504f2a3bdec83b4294a.jpg?v=2">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink:       #050505; /* Pure Void Black */
+  --slate:     #121212; /* Charcoal Base Control */
+  --carbon:    #1a1a1a; /* Structural Border Grey */
+  --ash:       #777777; /* Muted Technical Text */
+  --mist:      #cccccc; /* High Visibility Light Grey */
+  --bone:      #ffffff; /* Stark White Highlighting */
+  --line:      rgba(255,255,255,0.05);
+  
+  --ff-title:  'Bebas Neue', sans-serif;
+  --ff-body:   'Cormorant Garamond', serif;
+  --ff-mono:   'Share Tech Mono', monospace;
+  --ease-sharp: cubic-bezier(0.16,1,0.3,1);
+  --ease-snap:  cubic-bezier(0.77,0,0.175,1);
+}
+html { scroll-behavior: smooth; }
+body {
+  zoom: 75%; 
+  -moz-transform: scale(0.75); 
+  -moz-transform-origin: top center; 
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--ff-body);
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--bone); color: var(--ink); }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--ash); }
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35; 
+  mix-blend-mode: overlay;
+}
+
+/* ══════════════════════════════════
+   GLOBAL LINK DESIGN OVERHAUL
+   (Visible state + underline + hover)
+══════════════════════════════════ */
+a {
+  color: var(--mist); /* 💡 Makes links clearly visible (light grey) */
+  text-decoration: underline; /* 💡 Adds a permanent underline */
+  text-underline-offset: 4px; /* Gives the underline some clean breathing room */
+  outline: none;
+  display: inline-block;
+  transition: color 0.2s ease, padding 0.35s var(--ease-sharp), margin 0.35s var(--ease-sharp);
+}
+
+a:hover {
+  color: var(--bone); /* Pops to stark white on hover */
+  text-decoration: underline; /* Keeps the underline active on hover */
+  outline: 1px solid var(--mist); /* Your crisp structural box outline */
+  padding: 4px 10px;
+  margin: -4px -10px;
+}
+
+/* ══════════════════════════════════
+   NAVIGATION
+══════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem;
+  height: 64px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(5,5,5,0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.nav-brand {
+  display: flex; flex-direction: column; gap: 1px;
+}
+/* Prevent double box nesting inside branding anchors on hover */
+.nav-brand:hover { outline: none; padding: 0; margin: 0; }
+
+.nav-brand .wordmark {
+  font-family: var(--ff-title);
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  color: var(--bone);
+  line-height: 1;
+}
+ 
+.nav-brand .tagline {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex; gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+.nav-links a:hover {
+  color: var(--bone);
+}
+
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-toggle span { display: block; width: 28px; height: 1px; background: var(--bone); transition: transform 0.3s, opacity 0.3s; }
+
+/* ══════════════════════════════════
+   HERO SECTION (MEDIA CONTROLLED BG)
+══════════════════════════════════ */
+#hero {
+  position: relative;
+  height: 100svh; min-height: 650px;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 3rem 5rem;
+  overflow: hidden;
+}
+/* Replaced raw img tag with responsive CSS background container */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: background-image 0.4s var(--ease-sharp);
+}
+
+/* 🚨 REPLACEMENTS: SET BOTH OF YOUR BACKGROUND IMAGE LINKS HERE 🚨 */
+@media (min-width: 969px) {
+  .hero-bg {
+    background-image: url('fjfjf.png'); /* PC Wallpaper */
+  }
+}
+@media (max-width: 968px) {
+  .hero-bg {
+    background-image: url('fjfjf.png'); /* Mobile Wallpaper */
+    background-position: center bottom; /* Centers asset layout for smaller Viewports */
+    background-size: cover;
+  }
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, rgba(5,5,5,1) 0%, rgba(5,5,5,0.4) 40%, transparent 100%),
+    linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,0.6) 40%, transparent 80%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 900px;
+}
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.2rem;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.9s 0.2s var(--ease-sharp) forwards;
+}
+.eyebrow-line {
+  display: block; width: 40px; height: 1px; background: var(--ash);
+}
+.eyebrow-text {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+.hero-headline {
+  font-family: var(--ff-title);
+  font-size: clamp(4rem, 11vw, 7.5rem);
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+  color: var(--bone);
+  padding-top: 1rem;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 1s 0.4s var(--ease-sharp) forwards;
+}
+.hero-headline em {
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--bone);
+  color: transparent;
+}
+.hero-sub {
+  margin-top: 1.8rem;
+  font-family: var(--ff-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  color: var(--mist);
+  max-width: 550px;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.9s 0.65s var(--ease-sharp) forwards;
+}
+.hero-cta-row {
+  display: flex; align-items: center; gap: 3rem;
+  margin-top: 2.8rem;
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.9s 0.85s var(--ease-sharp) forwards;
+}
+
+.hero-scroll {
+  position: absolute; right: 3rem; bottom: 5rem; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  opacity: 0; animation: fadeIn 1s 1.4s forwards;
+}
+.scroll-label {
+  font-family: var(--ff-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ash);
+  writing-mode: vertical-rl;
+}
+.scroll-line {
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--ash), transparent);
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+/* ── DIVIDER ── */
+.section-divider {
+  display: flex; align-items: center; gap: 0;
+  padding: 6rem 3rem 0;
+  overflow: hidden;
+}
+.divider-label {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--bone);
+  white-space: nowrap;
+  padding-right: 1.5rem;
+}
+.divider-track {
+  flex: 1; height: 1px; background: var(--line);
+}
+
+/* ══════════════════════════════════
+   CAPABILITIES & SERVICES
+══════════════════════════════════ */
+#services {
+  padding: 6rem 3rem 2rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+  background: var(--line);
+  gap: 1px;
+}
+.service-card {
+  background: var(--slate);
+  padding: 3rem 2.5rem;
+  position: relative;
+  transition: background 0.35s var(--ease-sharp);
+}
+.service-card:hover {
+  background: #161616;
+}
+.service-num {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  color: var(--ash);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.service-title {
+  font-family: var(--ff-title);
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--bone);
+  margin-bottom: 1.2rem;
+}
+.service-desc {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  color: var(--mist);
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════
+   PRODUCTION SHOWCASE
+══════════════════════════════════ */
+#showcase {
+  position: relative;
+  padding: 4rem 3rem 6rem;
+}
+.section-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 2rem; margin-bottom: 4rem;
+}
+.section-number {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: var(--ff-title);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--bone);
+}
+.section-desc {
+  max-width: 360px;
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ash);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.card {
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s;
+}
+.card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--bone), transparent);
+  transform: scaleX(0);
+  transition: transform 0.5s var(--ease-sharp);
+  transform-origin: left;
+}
+.card:hover { background: rgba(20,20,20,0.9); }
+.card:hover::before { transform: scaleX(1); }
+
+.card-half   { grid-column: span 6; }
+.card-full   { grid-column: span 12; }
+
+.card-index {
+  font-family: var(--ff-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+.card-title {
+  font-family: var(--ff-title);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--bone);
+  margin-bottom: 1.2rem;
+}
+.card-body {
+  font-family: var(--ff-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--mist);
+  margin-bottom: 2rem;
+}
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+}
+.stack-tags li {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  color: var(--ash);
+  border: 1px solid var(--carbon);
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════
+   EPITAPH CONTINUOUS MARQUEE
+══════════════════════════════════ */
+.epitaph-band {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 2.5rem 0;
+  background: var(--slate);
+  overflow: hidden;
+}
+.epitaph-track {
+  display: flex;
+  animation: marquee 32s linear infinite;
+  white-space: nowrap;
+}
+.epitaph-item {
+  display: flex; align-items: center; gap: 2.5rem;
+  padding-right: 2.5rem;
+  flex-shrink: 0;
+}
+.epitaph-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--ash);
+  flex-shrink: 0;
+}
+.epitaph-text {
+  font-family: var(--ff-title);
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════
+   ENGINE VALUE SUMMARY MATRIX
+══════════════════════════════════ */
+#matrix {
+  padding: 6rem 3rem;
+}
+.matrix-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+.matrix-left h2 {
+  font-family: var(--ff-title);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.9;
+  color: var(--bone);
+}
+.matrix-right-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.matrix-node {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+.node-label {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.node-text {
+  font-family: var(--ff-body);
+  font-size: 1.05rem;
+  color: var(--mist);
+}
+
+/* ══════════════════════════════════
+   FOOTER HUB
+══════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 5rem 3rem 3rem;
+  background: var(--ink);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+.footer-brand .wordmark {
+  font-family: var(--ff-title);
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  color: var(--bone);
+  display: block;
+}
+.footer-brand .tagline {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.footer-col-title {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bone);
+  margin-bottom: 1.2rem;
+}
+.footer-endpoints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Spaced out slightly to accommodate clean outline interactions */
+}
+.footer-endpoints a {
+  font-family: var(--ff-mono);
+  font-size: 0.8rem;
+  color: var(--mist);
+}
+.footer-endpoints a:hover {
+  color: var(--bone);
+}
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleY(1); opacity: 0.4; }
+  50%       { transform: scaleY(1.25); opacity: 0.9; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.8s var(--ease-sharp), transform 0.8s var(--ease-sharp);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ADAPTATIONS ── */
+@media (max-width: 968px) {
+  .services-grid, .matrix-container, .matrix-right-grid { grid-template-columns: 1fr; }
+  .card-half { grid-column: span 12; }
+  .footer-top { grid-template-columns: 1fr; }
+  #hero { padding: 0 1.5rem 4rem; }
+  nav, #services, #showcase, #matrix, footer, .section-divider { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+</style>
 </head>
 <body>
 
-    <canvas id="petals-canvas"></canvas>
-
-    <nav>
-        <button class="nav-logo" onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">
-            <span>ME</span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Aion</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="home" class="section">
-        
-        <div class="paper-tear doodle">
-            <svg width="240" height="120" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0 H230 L220 20 L235 35 L215 50 L228 65 L210 80 L225 100 L0 100 Z" fill="#FFFDF7" stroke="rgba(123,28,28,0.3)" stroke-width="1"/>
-                <line x1="20" y1="20" x2="210" y2="20" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
-                <line x1="20" y1="34" x2="210" y2="34" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
-                <line x1="20" y1="48" x2="210" y2="48" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
-                <line x1="20" y1="62" x2="210" y2="62" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
-                <line x1="20" y1="76" x2="210" y2="76" stroke="rgba(123,28,28,0.15)" stroke-width="1"/>
-                <line x1="38" y1="10" x2="38" y2="90" stroke="rgba(220,80,80,0.25)" stroke-width="1.5"/>
-                <text x="48" y="26" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.5)">notes &amp; ideas</text>
-                <text x="48" y="40" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.4)">✦ build cool stuff</text>
-                <text x="48" y="54" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.35)">✦ lead &amp; create</text>
-                <text x="48" y="68" font-family="Caveat,cursive" font-size="11" fill="rgba(123,28,28,0.3)">✦ ship it</text>
-            </svg>
-        </div>
-
-        <div class="ghost-figure">
-            <svg viewBox="0 0 200 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="100" cy="60" rx="38" ry="45" fill="rgba(123,28,28,0.15)" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
-                <path d="M62 100 C50 130 45 180 48 240 L60 230 L75 280 L80 370 L100 375 L105 280 L115 370 L120 375 L125 280 L140 230 L152 240 C155 180 150 130 138 100 Z" fill="rgba(123,28,28,0.12)" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
-                <path d="M62 115 C40 120 20 140 15 170 L30 175 L20 200 L40 195" fill="none" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
-                <path d="M138 115 C160 120 180 140 185 170 L170 175 L180 200 L160 195" fill="none" stroke="rgba(123,28,28,0.2)" stroke-width="1.5"/>
-            </svg>
-        </div>
-
-        <div class="doodle plane-1">
-            <svg width="90" height="50" viewBox="0 0 90 50" fill="none">
-                <path d="M5 40 L80 8 L50 35 L40 28 Z" stroke="rgba(123,28,28,0.5)" stroke-width="1.5" fill="rgba(245,237,216,0.4)" stroke-linejoin="round"/>
-                <path d="M50 35 L45 48 L40 28" stroke="rgba(123,28,28,0.4)" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-            </svg>
-        </div>
-
-        <div class="doodle dynamic-burst">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 0C30 16.5685 16.5685 30 0 30C16.5685 30 30 43.4315 30 60C30 43.4315 43.4315 30 60 30C43.4315 30 30 16.5685 30 0Z" fill="var(--maroon-light)" opacity="0.35"/>
-            </svg>
-        </div>
-        
-        <div class="doodle star-1">
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                <line x1="25" y1="5" x2="25" y2="45" stroke="rgba(123,28,28,0.45)" stroke-width="1.5"/>
-                <line x1="5" y1="25" x2="45" y2="25" stroke="rgba(123,28,28,0.45)" stroke-width="1.5"/>
-                <circle cx="25" cy="25" r="3" fill="rgba(123,28,28,0.4)"/>
-            </svg>
-        </div>
-
-        <div class="botanical doodle">
-            <svg viewBox="0 0 180 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M90 210 C90 180 85 150 88 120 C91 90 87 60 90 30" stroke="rgba(123,28,28,0.4)" stroke-width="1.5" fill="none"/>
-                <path d="M90 160 C70 145 55 130 60 110 C65 130 80 140 90 160" stroke="rgba(123,28,28,0.35)" stroke-width="1" fill="rgba(123,28,28,0.06)"/>
-                <path d="M90 160 C110 145 125 130 120 110 C115 130 100 140 90 160" stroke="rgba(123,28,28,0.35)" stroke-width="1" fill="rgba(123,28,28,0.06)"/>
-                <circle cx="90" cy="28" r="15" stroke="rgba(123,28,28,0.4)" stroke-width="1" fill="rgba(245,237,216,0.5)"/>
-                <polygon points="130,170 140,160 152,165 152,178 140,183" fill="rgba(123,28,28,0.7)" stroke="rgba(80,10,10,0.8)" stroke-width="1"/>
-                <circle cx="141" cy="172" r="10" fill="rgba(123,28,28,0.8)" stroke="rgba(200,150,100,0.4)" stroke-width="1"/>
-                <text x="136" y="176" font-family="Georgia,serif" font-size="10" fill="rgba(245,237,216,0.9)" font-weight="bold">ME</text>
-            </svg>
-        </div>
-
-
-        <div class="hero-inner">
-            <div class="hero-tag">✦ Developer ✦</div>
-            <h1 class="hero-name">AYAN<br>IMRAN</h1>
-            <p class="hero-ceo">CEO of AION</p>
-            <p class="hero-scroll-hint">↓ scroll to explore ↓</p>
-        </div>
-
-        <div class="loader">
-            <span></span>
-        </div>
-
-    </section>
-
-    <section id="projects" class="section">
-        <h2 class="section-header">My Projects</h2>
-
-        <div class="carousel-wrap">
-            <button class="carousel-btn prev" onclick="slideCarousel(-1)">&#8592;</button>
-            <button class="carousel-btn next" onclick="slideCarousel(1)">&#8594;</button>
-
-            <div class="carousel-track" id="carousel">
-
-                <a href="https://azanimran112243-sudo.github.io/" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <div class="card-thumb">
-                            <div class="card-thumb">
-    <img src="1p.png" class="project-thumb-img" alt="Grokrunner">
+<nav aria-label="Main system navigation">
+  <a href="#" class="nav-brand">
+    <span class="wordmark">AYAN IMRAN</span>
     
-    <div class="card-thumb-inner"></div>
-</div>
-                        </div>
-                        <h3 class="card-title">CHARACTER SPECIAL</h3>
-                        <p class="card-desc">A full-stack coding community hub — built to teach, inspire, and connect the next generation of builders.</p>
-                        <div>
-                            <span class="card-tag">front-end</span><span class="card-tag">UI/UX</span>
-                        </div>
-                        <span class="card-btn">VIEW LIVE ↗</span>
-                    </div>
-                </a>
+  </a>
 
-                  <a href="https://azanimran112243-sudo.github.io/project-664/" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <div class="card-thumb">
-                            <div class="card-thumb">
-    <img src="2p.png" class="project-thumb-img" alt="Grokrunner">
-    
-    <div class="card-thumb-inner"></div>
-</div>
-                        </div>
-                        <h3 class="card-title">High Visuals</h3>
-                        <p class="card-desc">Just Build in 2 days</p>
-                        <div>
-                            <span class="card-tag">front-end</span><span class="card-tag">UI/UX</span>
-                        </div>
-                        <span class="card-btn">VIEW LIVE ↗</span>
-                    </div>
-                </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Layout">
+    <span></span><span></span><span></span>
+  </button>
 
-                 <a href="https://grokrunner.store/" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <div class="card-thumb">
-                            <div class="card-thumb">
-    <img src="3p.png" class="project-thumb-img" alt="Grokrunner">
-    
-    <div class="card-thumb-inner"></div>
-</div>
-                        </div>
-                        <h3 class="card-title">3D Model</h3>
-                        <p class="card-desc">a satisfied client</p>
-                        <div>
-                            <span class="card-tag">3D Model</span><span class="card-tag">UI/UX</span>
-                        </div>
-                        <span class="card-btn">VIEW LIVE ↗</span>
-                    </div>
-                </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Identity</a></li>
+    <li><a href="#services">Capabilities</a></li>
+    <li><a href="#showcase">Production</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+</nav>
 
-                <a href="https://your-live-project-link4.com" target="_blank" class="project-card-link">
-                    <div class="project-card">
-                        <div class="card-thumb">
-                            <div class="card-thumb-inner">
-                                <span class="card-thumb-label">[ comming soon... ]</span>
-                            </div>
-                        </div>
-                        <h3 class="card-title">in progress</h3>
-                        <p class="card-desc"></p>
-                        <div>
-                            <span class="card-tag">...</span><span class="card-tag">...</span>
-                        </div>
-                        <span class="card-btn">VIEW LIVE ↗</span>
-                    </div>
-                </a>
+<section id="hero">
+  <!-- Dynamic Media Asset Component Container -->
+  <div class="hero-bg" id="parallaxBg"></div>
 
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <h2 class="section-header">About the Boss</h2>
-
-        <div class="about-grid">
-            <div class="about-bio">
-                <p>I am <strong>Ayan Imran</strong>, a developer with a leadership mindset. Combining a background in programming with a passion for building impactful, high-performance systems. I lead projects with clarity and focus, driving them to success.</p>
-                <br>
-                <p>I believe the best code is written with conviction — not just logic. Every function, every deploy, every commit is a small act of leadership.</p>
-                <br>
-                <p><span class="daba">AION</span> is my creative outlet — a platform I built to share knowledge, spark curiosity, and cultivate a culture where building is celebrated. It's scrappy, real, and genuinely mine.</p>
-                <br>
-                <p>I ship fast. I think big. I document obsessively.</p>
-            </div>
-
-            <div>
-                <div class="skills-wrap">
-                    <p class="skills-title">// Skill Pulse</p>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-label"><span>JavaScript</span><span class="skill-pct">92%</span></div>
-                        <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-label"><span>Problem Solving</span><span class="skill-pct">85%</span></div>
-                        <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-label"><span>Design</span><span class="skill-pct">88%</span></div>
-                        <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-label"><span>Project Leadership</span><span class="skill-pct">96%</span></div>
-                        <div class="skill-track"><div class="skill-fill" data-width="96"></div></div>
-                    </div>
-                </div>
-
-                <div class="timeline-wrap">
-                    <p class="timeline-title">// Leadership Timeline</p>
-                    <div class="timeline">
-                        <div class="tl-item">
-                            <p class="tl-year">EARLY VENTURES</p>
-                            <p class="tl-label">First scripts, first bugs, first wins. Building the foundation.</p>
-                        </div>
-                        <div class="tl-item">
-                            <p class="tl-year">AION</p>
-                            <p class="tl-label">Launched the platform. Turned solo code into a movement.</p>
-                        </div>
-                        <div class="tl-item">
-                            <p class="tl-year">CEO PHASE ✦ NOW</p>
-                            <p class="tl-label">Leading, shipping, teaching. The whole operation — one mind.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="section">
-        <h2 class="section-header">Fav characters</h2>
-        <p class="blog-subtitle">I watch anime a lot and i also have some real life ideals</p>
-        
-        <div class="blog-grid">
-            <article class="blog-card">
-                <div class="blog-meta">
-                    <span class="blog-date">MAY 2026</span>
-                    <span class="blog-category">Real life character</span>
-                </div>
-                <h3 class="blog-title"><a href="#">Khalid bin Walid</a></h3>
-                <p class="blog-excerpt"> "I bring the men who desire death as ardently as you desire life."</p>
-                <div class="blog-footer">
-                    <span class="blog-author">— Khlid bin Walid</span>
-                    <a href="#" class="blog-more">Sworld of Allah</a>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <div class="blog-meta">
-                    <span class="blog-date">APR 2026</span>
-                    <span class="blog-category">Anime</span>
-                </div>
-                <h3 class="blog-title"><a href="#">Monkey D. LUFFY</a></h3>
-                <p class="blog-excerpt">"If you're hungry, eat."</p>
-                <div class="blog-footer">
-                    <span class="blog-author">— Luffy</span>
-                    <a href="#" class="blog-more">Future Pirate King</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-  <section id="contact" class="section">
-    <h2 class="section-header">Let's Connect</h2>
-    <p class="contact-desc-text">
-        Got a project, a collab idea, or just want to say hello? Reach out — I'm always building something new.
-    </p>
-
-    <div class="contact-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 30px;">
-        
-        <a href="https://wa.me/923316389247" target="_blank" rel="noopener noreferrer">
-            <button class="contact-btn">
-                <span>WHATSAPP</span>
-            </button>
-        </a>
-
-        <a href="https://instagram.com/ayan_15o" target="_blank" rel="noopener noreferrer">
-            <button class="contact-btn">
-                <span>INSTAGRAM</span>
-            </button>
-        </a>
-
-        <a href="mailto:1ayan1imran1@gmail.com">
-            <button class="contact-btn">
-                <span>EMAIL</span>
-            </button>
-        </a>
-        
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">LAHORE, PAKISTAN // CORE ENGINE</span>
     </div>
 
-        <div class="anchor-corner doodle">
-            <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="30" stroke="rgba(123,28,28,0.35)" stroke-width="1.5" fill="none"/>
-                <path d="M50 20 L54 44 L50 48 L46 44 Z" fill="rgba(123,28,28,0.55)"/>
-                <path d="M50 80 L54 56 L50 52 L46 56 Z" fill="rgba(245,237,216,0.8)" stroke="rgba(123,28,28,0.4)" stroke-width="0.8"/>
-                <text x="47" y="16" font-family="Oswald,sans-serif" font-size="8" fill="rgba(123,28,28,0.6)" font-weight="700">N</text>
-            </svg>
+    <h1 class="hero-headline">
+      I CAN MAKE A<br>
+      <em>DEAD BUSINESS</em><br>
+      RUN CONVERTING
+    </h1>
+
+    <p class="hero-sub">
+      High-class architectural visuals built through strict functional code. Turning passive interfaces into hyper-optimized digital operational assets.
+    </p>
+
+    <div class="hero-cta-row">
+      <a href="https://wa.me/923316389247" target="_blank">Initiate Project →</a>
+      <a href="#showcase">Review Operations</a>
+    </div>
+  </div>
+
+  <aside class="hero-scroll">
+    <span class="scroll-label">SYSTEM_SCROLL</span>
+    <span class="scroll-line"></span>
+  </aside>
+</section>
+
+<div class="epitaph-band">
+  <div class="epitaph-track">
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">HIGH CLASS VISUAL ENGINEERING</span></div>
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">GSAP INTERACTIVE ACCELERATION</span></div>
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">UIUX STRUCTURAL OPTIMIZATION</span></div>
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">B2B GROWTH CONVERSION ENGINE</span></div>
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">HIGH CLASS VISUAL ENGINEERING</span></div>
+    <div class="epitaph-item"><span class="epitaph-dot"></span><span class="epitaph-text">GSAP INTERACTIVE ACCELERATION</span></div>
+  </div>
+</div>
+
+<div class="section-divider reveal">
+  <span class="divider-label">§ I — EXPERTISE OPERATIONS</span>
+  <span class="divider-track"></span>
+</div>
+
+<section id="services">
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01 / BRAND INTERFACE</span>
+      <h3 class="service-title">UI/UX & GRAPHIC DESIGN</h3>
+      <p class="service-desc">
+        Constructing intentional layouts and visual structures using Figma and industry-standard architecture. Every pixel is calculated to match clean, cyber-editorial typography with robust styling rules.
+      </p>
+    </div>
+    <div class="service-card reveal" style="transition-delay: 0.1s;">
+      <span class="service-num">02 / INTERACTION DEPTH</span>
+      <h3 class="service-title">FRONT-END ENGINEERING</h3>
+      <p class="service-desc">
+        Developing responsive structures utilizing pure modern Javascript, semantic HTML5, and SASS/CSS matrices. Clean execution with seamless, performance-optimized load structures.
+      </p>
+    </div>
+    <div class="service-card reveal" style="transition-delay: 0.2s;">
+      <span class="service-num">03 / SPECIAL SOLUTIONS</span>
+      <h3 class="service-title">B2B CONVERSION MECHANICS</h3>
+      <p class="service-desc">
+        Rebuilding struggling platforms through interactive 3D model delivery, automated system loops (such as direct WhatsApp API triggers), and interactive digital menus designed for rapid client acquisition.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider reveal">
+  <span class="divider-label">§ II — PRODUCTION PIPELINE</span>
+  <span class="divider-track"></span>
+</div>
+
+<section id="showcase">
+  <header class="section-header reveal">
+    <div>
+      <p class="section-number">PRODUCTION ARCHIVE</p>
+      <h2 class="section-title">DEPLOYED<br>NODES</h2>
+    </div>
+    <p class="section-desc">
+      A validation of functional technical design. Active web projects live in production, processing layouts under fluid interactive parameters.
+    </p>
+  </header>
+
+  <div class="showcase-grid">
+    <article class="card card-half reveal">
+      <p class="card-index">NODE 01 / LIVE ECOSYSTEM</p>
+      <h3 class="card-title">GROKRUNNER.STORE</h3>
+      <p class="card-body">
+        A custom e-commerce solution configured to integrate complex web interactions, structured buy flows, and direct automation hooks. Built cleanly with custom web protocols.
+      </p>
+      <ul class="stack-tags">
+        <li>E-Commerce</li>
+        <li>CSS3 Layouts</li>
+        <li>JS Automation</li>
+        <li>API Hooks</li>
+      </ul>
+      <p style="margin-top:2.5rem;"><a href="https://grokrunner.store/" target="_blank">Launch Live Node →</a></p>
+    </article>
+
+    <article class="card card-half reveal" style="transition-delay: 0.1s;">
+      <p class="card-index">NODE 02 / EXPERIMENTAL VISUAL</p>
+      <h3 class="card-title">KHALID BIN WALID PROFILE</h3>
+      <p class="card-body">
+        An interactive, cinematic character portfolio emphasizing aggressive typography hierarchies, horizontal marquee mechanics, and deep, responsive parallax configurations. Ranked as primary showcase node.
+      </p>
+      <ul class="stack-tags">
+        <li>Bebas Neue Hierarchy</li>
+        <li>Marquee Tracks</li>
+        <li>Scroll Animation</li>
+        <li>Fluid Grids</li>
+      </ul>
+      <p style="margin-top:2.5rem;"><a href="https://azanimran112243-sudo.github.io/khalid/" target="_blank">Launch Live Node →</a></p>
+    </article>
+  </div>
+</section>
+
+<div class="section-divider reveal">
+  <span class="divider-label">§ III — INTERNAL STACK LOGIC</span>
+  <span class="divider-track"></span>
+</div>
+
+<section id="matrix" class="reveal">
+  <div class="matrix-container">
+    <div class="matrix-left">
+      <h2>TECHNICAL<br>COMPILATION</h2>
+    </div>
+    <div class="matrix-right">
+      <div class="matrix-right-grid">
+        <div class="matrix-node">
+          <span class="node-label">DESIGN CORE</span>
+          <p class="node-text">VS Code Studio, GitHub Version Management, UI/UX Wireframing, Creative Graphic Direction</p>
         </div>
-    </section>
+        <div class="matrix-node">
+          <span class="node-label">DEVELOPMENT SYSTEM</span>
+          <p class="node-text">HTML5 Semantics, Vanilla JavaScript, GSAP Interaction Timelines, Advanced CSS, Interactive 3D Mockups</p>
+        </div>
+        <div class="matrix-node">
+          <span class="node-label">SPECIALTY SPECIALIZATION</span>
+          <p class="node-text">High-Class Editorial Visuals, Direct Client Integration Platforms, Front-End Interface Optimization</p>
+        </div>
+        <div class="matrix-node">
+          <span class="node-label">PRIMARY STATUS</span>
+          <p class="node-text">Available for selective technical contracts and conversion-overhaul design allocations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>✦ Ayan Imran — CEO of AION ✦ Built with conviction, shipped with pride ✦</p>
-    </footer>
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="wordmark">AYAN IMRAN</span>
+      <span class="tagline">ENGINE UNIFIED // EST 2026</span>
+    </div>
+    <div>
+      <p class="footer-col-title">SYSTEM COMMUNICATE</p>
+      <ul class="footer-endpoints">
+        <li><a href="mailto:workkingtungtung@gmail.com">workkingtungtung@gmail.com</a></li>
+        <li><a href="https://wa.me/923316389247" target="_blank">WhatsApp Direct Engine</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">NETWORKS</p>
+      <ul class="footer-endpoints">
+        <li><a href="https://instagram.com/ayan_15o" target="_blank">Instagram: @ayan_15o</a></li>
+        <li><a href="https://github.com/azanimran112243-sudo" target="_blank">GitHub Node</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 AYAN IMRAN. NO SYSTEM LOSSES ENCOUNTERED. LAHORE BASED.</p>
+  </div>
+</footer>
 
-    <script>
-    /* ── FALLING PETALS CANVAS ENGINE ───────── */
-    (function() {
-        const canvas = document.getElementById('petals-canvas');
-        const ctx = canvas.getContext('2d');
-        let W, H, petals = [];
+<script>
+/* ── NAV TOGGLE CONTROL ── */
+const navToggle = document.getElementById('navToggle');
+const navLinks  = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.style.display === 'flex';
+  if(!open) {
+    navLinks.style.display = 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.left = '0';
+    navLinks.style.width = '100%';
+    navLinks.style.background = '#050505';
+    navLinks.style.padding = '2rem';
+  } else {
+    navLinks.style.display = '';
+  }
+});
 
-        function resize() {
-            W = canvas.width = window.innerWidth;
-            H = canvas.height = window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        const COLORS = [
-            'rgba(123,28,28,0.55)',
-            'rgba(155,44,44,0.5)',
-            'rgba(180,60,60,0.45)',
-            'rgba(100,15,15,0.6)',
-            'rgba(140,30,30,0.4)',
-        ];
-
-        function Petal() {
-            this.reset = function() {
-                this.x = Math.random() * W;
-                this.y = -20;
-                this.size = Math.random() * 10 + 6; 
-                this.speedY = Math.random() * 1.4 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.8;
-                this.rotation = Math.random() * Math.PI * 2;
-                this.rotSpeed = (Math.random() - 0.5) * 0.05;
-                this.sway = Math.random() * 2.5 + 1;
-                this.swaySpeed = Math.random() * 0.02 + 0.01;
-                this.swayOffset = Math.random() * Math.PI * 2;
-                this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-                this.opacity = Math.random() * 0.5 + 0.3;
-                this.tick = 0;
-            };
-            this.reset();
-            this.y = Math.random() * H;
-        }
-
-        Petal.prototype.update = function() {
-            this.tick++;
-            this.y += this.speedY;
-            this.x += this.speedX + Math.sin(this.tick * this.swaySpeed + this.swayOffset) * this.sway * 0.03;
-            this.rotation += this.rotSpeed;
-            if (this.y > H + 30) this.reset();
-        };
-
-        Petal.prototype.draw = function() {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.rotation);
-            ctx.globalAlpha = this.opacity;
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.moveTo(0, -this.size);
-            ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.6, this.size * 0.8, this.size * 0.5, 0, this.size * 0.7);
-            ctx.bezierCurveTo(-this.size * 0.8, this.size * 0.5, -this.size * 0.8, -this.size * 0.6, 0, -this.size);
-            ctx.fill();
-            ctx.restore();
-        };
-
-        for (let i = 0; i < 48; i++) petals.push(new Petal()); 
-
-        function loop() {
-            ctx.clearRect(0, 0, W, H);
-            petals.forEach(p => { p.update(); p.draw(); });
-            requestAnimationFrame(loop);
-        }
-        loop();
-    })();
-
-    /* ── SCROLL OBSERVER FADE-IN ────────────── */
-    const sections = document.querySelectorAll('.section'); 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                if (e.target.id === 'about') {
-                    setTimeout(animateSkills, 300);
-                }
-            }
-        });
-    }, { threshold: 0.1 });
-    sections.forEach(s => observer.observe(s));
-
-    /* ── SKILL BARS ACCELERATION ────────────── */
-    let skillsAnimated = false;
-    function animateSkills() {
-        if (skillsAnimated) return;
-        skillsAnimated = true;
-        document.querySelectorAll('.skill-fill').forEach(fill => {
-            const w = fill.getAttribute('data-width');
-            setTimeout(() => { fill.style.width = w + '%'; }, 100);
-        });
+/* ── SCROLL INTERSECTION OBSERVER ── */
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
     }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => io.observe(el));
 
-    /* ── CAROUSEL CONTROLLER ────────────────── */
-   /* ── CAROUSEL CONTROLLER ────────────────── */
-    let carouselIndex = 0;
-    const track = document.getElementById('carousel');
-
-    // Dynamically get the width of a card
-    function getCardWidth() {
-        const card = document.querySelector('.project-card-link');
-        return card ? card.offsetWidth : 328; // Fallback to 328 if not found
+/* ── INTERACTIVE PARALLAX SCROLL COMPILATION ── */
+const heroBg = document.getElementById('parallaxBg');
+let scrollY = 0;
+let ticking = false;
+if (heroBg) {
+  window.addEventListener('scroll', () => {
+    scrollY = window.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (scrollY < window.innerHeight) {
+          heroBg.style.backgroundPositionY = `calc(100% + ${scrollY * 0.15}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
-
-    function slideCarousel(dir) {
-        const CARD_W = getCardWidth(); // Always get current width
-        const cards = track.querySelectorAll('.project-card-link');
-        // Calculate max index based on current width
-        const maxIndex = cards.length - Math.floor(track.parentElement.offsetWidth / CARD_W);
-        carouselIndex = Math.max(0, Math.min(carouselIndex + dir, Math.max(0, maxIndex)));
-        track.style.transform = `translateX(-${carouselIndex * CARD_W}px)`;
-    }
-
-    // Reset position on resize to prevent layout breaking
-   // ... Replace the "// ... (Keep the rest...)" comment with this:
-
-    document.addEventListener('mousemove', e => {
-        if (!isDragging) return;
-        const dx = startX - e.clientX;
-        track.style.transform = `translateX(-${Math.max(0, startScroll + dx)}px)`;
-    });
-
-    document.addEventListener('mouseup', e => {
-        if (!isDragging) return;
-        isDragging = false;
-        track.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
-        const dx = startX - e.clientX;
-        // Slide only if dragged enough
-        if (Math.abs(dx) > 60) slideCarousel(dx > 0 ? 1 : -1);
-        else slideCarousel(0);
-    });
-
-    track.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-        startScroll = carouselIndex * getCardWidth();
-        track.style.transition = 'none';
-    }, { passive: true });
-    
-    // ... (Keep the rest of your move/mouse listeners as they are)
-
-    </script>
+  }, { passive: true });
+}
+</script>
 </body>
 </html>
