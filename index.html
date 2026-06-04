@@ -176,7 +176,7 @@ nav {
 ══════════════════════════════════ */
 #hero {
   position: relative;
-  height: 100svh; min-height: 650px;
+  height: 100%; min-height: 650px;
   display: flex; flex-direction: column;
   justify-content: flex-end;
   padding: 0 3rem 5rem;
@@ -205,6 +205,7 @@ nav {
     background-position: center bottom; /* Centers asset layout for smaller Viewports */
     background-size: cover;
   }
+  .wordmark {opacity: 0;}
 }
 
 .hero-bg::after {
@@ -240,7 +241,7 @@ nav {
   line-height: 0.85;
   letter-spacing: 0.01em;
   color: var(--bone);
-  padding-top: 1rem;
+  padding-top: 5rem;
   opacity: 0; transform: translateY(30px);
   animation: fadeUp 1s 0.4s var(--ease-sharp) forwards;
 }
@@ -623,6 +624,7 @@ footer {
   .footer-top { grid-template-columns: 1fr; }
   #hero { padding: 0 1.5rem 4rem; }
   nav, #services, #showcase, #matrix, footer, .section-divider { padding-left: 1.5rem; padding-right: 1.5rem; }
+  
 }
 </style>
 </head>
@@ -657,9 +659,11 @@ footer {
     </div>
 
     <h1 class="hero-headline">
-      I CAN MAKE A<br>
-      <em>DEAD BUSINESS</em><br>
-      RUN CONVERTING
+      I CAN<br>
+      MAKE A<br>
+      <em>DEAD<br>
+        BUSINESS</em><br>
+      RUN
     </h1>
 
     <p class="hero-sub">
@@ -747,7 +751,7 @@ footer {
         <li>E-Commerce</li>
         <li>CSS3 Layouts</li>
         <li>JS Automation</li>
-        <li>API Hooks</li>
+        
       </ul>
       <p style="margin-top:2.5rem;"><a href="https://grokrunner.store/" target="_blank">Launch Live Node →</a></p>
     </article>
@@ -762,7 +766,7 @@ footer {
         <li>Bebas Neue Hierarchy</li>
         <li>Marquee Tracks</li>
         <li>Scroll Animation</li>
-        <li>Fluid Grids</li>
+        <li>Clean ui/ux</li>
       </ul>
       <p style="margin-top:2.5rem;"><a href="https://azanimran112243-sudo.github.io/khalid/" target="_blank">Launch Live Node →</a></p>
     </article>
